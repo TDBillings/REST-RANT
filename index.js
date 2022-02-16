@@ -4,6 +4,7 @@ const app = express()
 
 app.set('veiw engine', 'jsx')
 app.engine('jsx', require('express-react-veiws').createEngine())
+app.use(express.static('public'))
 
 app.use('/places', require('./controllers/places'))
 
